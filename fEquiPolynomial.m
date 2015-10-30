@@ -1,4 +1,7 @@
 function [ p ] = fEquiPolynomial( F, a, b, n )
+%%returns a symbolic polynomial:p(t) that fits function F
+%on the interval [a,b] spaced at n points.
+
 
 x = linspace(a,b,n);
 y = eval(F);
