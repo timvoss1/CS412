@@ -26,24 +26,7 @@ for i = 1:(length(x)-1)
     P(i+1) = N(i+1)*M(1,2+i);
 end
 
-    p = sum(P);
-    
-%     clf;
-%     hold on
-%     x = linspace(a-5,b+5,n+2);
-%     y = eval(F);
-%     plot(x,y,'o');
-%     
-%     t = x;
-%     y = eval(p);
-%     plot(t,y,'+');
-%     
-%     legend('original', 'interpolated');
-%     hold off;
-    
-
-% P'      %Polynomial in vector form
-% p       %Polynomial in equation form
+p = sum(P);
 
 end
 
