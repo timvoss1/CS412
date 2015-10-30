@@ -1,4 +1,7 @@
 function [ p ] = fChebPolynomial( F, a, b, n )
+%%returns a symbolic polynomial:p(t) that fits function F
+%on the interval [a,b] spaced at n points. The values the function
+%is evaluated at corresponds to Chebyshev.
 
 x = zeros(1,n);
 for j = 0:(n-1)
@@ -30,25 +33,8 @@ for i = 1:(length(x)-1)
     P(i+1) = N(i+1)*M(1,2+i);
 end
 
-    p = sum(P);
-    
-%     clf;
-%     hold on
-% %     x = linspace(a-5,b+5,n+2);
-% %     y = eval(F);
-%     plot(x,y,'o');
-%     
-%     t = linspace(a-5,b+5, n+10);
-%     y = eval(p);
-%     plot(t,y,'+');
-%     
-%     legend('original', 'interpolated');
-%     axis([a-5, b+5, a-5, b+5]);
-%     hold off;
-    
+p = sum(P);
 
-% P'      %Polynomial in vector form
-% p       %Polynomial in equation form
 
 end
 
